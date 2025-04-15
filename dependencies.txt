@@ -4,7 +4,14 @@ hypridle
 hyprshot
 waybar
 swaync
-hyprpaper
+hyprpaper:
+  -> created a script for random wallpaper. To make the script executable:
+    $ chmod +x ~/.config/hypr/scripts/random-wallpaper.sh
+    $ chmod +x ~/.config/hypr/scripts/auto-wallpaper.sh
+
+    should be run at first, then make sure of the path in the random-wallpaper.sh file and uncomment the exec-once in hyprland.conf file.
+    will be good to go
+
 wlogout:
   -> first remove the icons from /usr/share/wlogout/icons/ by 
       $ cd /usr/share/wlogout/icons/
