@@ -1,0 +1,78 @@
+/* Default Waybar styling */
+* {
+  border: none;
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 14px;
+}
+
+/* Transparent background for whole bar (if you want) */
+#waybar {
+  background-color: rgba(20, 20, 20, 0); /* 60% opacity */
+  color: #ffffff;
+}
+
+/* Make individual modules more/less transparent */
+
+/* Transparent workspace module */
+#workspaces {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 30px;
+  padding: 5px 10px;
+  background-color: #000000;
+  border-radius: 999px;
+  
+  /*align-items: center;*/
+  transition: background-color 0.3s ease-in-out;
+}
+
+#workspaces button {
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  /*display: flex;
+  
+  justify-content: center;
+  min-width: 5px;
+
+  min-height: 5px;*/
+}
+
+#workspaces button.active {
+  background-color: #006A71;
+  font-weight: bold;
+  color: #ffffff;
+  font-size : 50px;
+  /*transform: scale(1.1);*/
+  box-shadow: 0 0 10px rgba(0, 106, 113, 0.5);
+}
+
+#workspaces button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  /*cursor: pointer;*/
+}
+
+
+/* Clock - fully opaque */
+#clock {
+  background-color: rgba(20, 20, 20, 1.0);
+  border-radius: 10px;
+  padding: 2px 10px;
+}
+
+/* Custom module (example: weather or CPU) - light tint */
+#custom-cpu {
+  background-color: rgba(50, 50, 50, 0.7);
+  border-radius: 8px;
+  padding: 2px 8px;
+}
+
+/* System tray */
+#tray {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2px 6px;
+  border-radius: 8px;
+}
+

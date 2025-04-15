@@ -1,19 +1,19 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height":30, // Waybar height (to be removed for auto height)
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height":10, // Waybar height (to be removed for auto height)
     //"width": 1080, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     
-   // "reload_style_on_change" : true,
+    "reload_style_on_change" : true,
    
     // Choose the order of the modules
 
     "modules-left": [
         "hyprland/workspaces"
     ],
-    "modules-center": [
+   /* "modules-center": [
         "hyprland/window"
     ],
     "modules-right": [
@@ -34,19 +34,22 @@
         "tray",
         "custom/power"
        // "backlight/slider"
-    ],
+    ],*/
     //Modules configuration
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "warp-on-scroll": false,
-        "format": "{name}: {icon}",
-        "format-icons": {
-            "urgent": "",
-            "active": "",
-            "default": ""
-        }
-    },
+"hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{icon}",
+    "on-click": "hyprctl dispatch workspace e+1",  // or custom click action
+    //"on-click-right": "hyprctl dispatch workspace e-1",
+    "format-icons": {
+       "urgent": "\uea71",     // nf-fa-exclamation
+        "active": "\uea71",     // nf-cod-circle_large_filled
+        "default": "\uea71"     // nf-cod-circle_small
+    } 
+},
+
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -110,8 +113,8 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
-        "spacing": 10,
+        //"icon-size": 50,
+        "spacing": 10
         // "icons": {
         //   "blueman": "bluetooth",
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
