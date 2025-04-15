@@ -5,4 +5,10 @@ hyprshot
 waybar
 swaync
 hyprpaper
-wlogout
+wlogout:
+  -> first remove the icons from /usr/share/wlogout/icons/ by 
+      $ cd /usr/share/wlogout/icons/
+      $ sudo rm *.png
+  -> then set the colors from the icons of the assets to that folder
+  -> $sudo cp ~/.config/wlogout/assets/*.png /usr/share/wlogout/icons 
+  
