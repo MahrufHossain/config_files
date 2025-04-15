@@ -2,7 +2,7 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height":10, // Waybar height (to be removed for auto height)
+    "height":25, // Waybar height (to be removed for auto height)
     //"width": 1080, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     
@@ -13,41 +13,45 @@
     "modules-left": [
         "hyprland/workspaces"
     ],
-   /* "modules-center": [
-        "hyprland/window"
-    ],
+   // "modules-center": [
+   //     "hyprland/window"
+   // ],
     "modules-right": [
         "mpd",
         "idle_inhibitor",
         "pulseaudio",
         "network",
-        "power-profiles-daemon",
-        "cpu",
+               "cpu",
         "memory",
         "temperature",
         "backlight",
         "keyboard-state",
         "sway/language",
+         "power-profiles-daemon",
+
         "battery",
-        "battery#bat2",
+        
         "clock",
         "tray",
         "custom/power"
        // "backlight/slider"
-    ],*/
+    ],
     //Modules configuration
 "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "warp-on-scroll": false,
-    "format": "{icon}",
-    "on-click": "hyprctl dispatch workspace e+1",  // or custom click action
-    //"on-click-right": "hyprctl dispatch workspace e-1",
-    "format-icons": {
-       "urgent": "\uea71",     // nf-fa-exclamation
-        "active": "\uea71",     // nf-cod-circle_large_filled
-        "default": "\uea71"     // nf-cod-circle_small
-    } 
+  "disable-scroll": true,
+  "all-outputs": true,
+  "warp-on-scroll": false,
+  "format": "{name}",  // shows workspace number like 1, 2, 3
+  "on-click": "hyprctl dispatch workspace e+1",
+  "format-icons": {
+    "default": "{name}",
+    "active": "{name}",
+    "urgent": "{name}"
+  }
+},
+
+"hyprland/window":{
+  
 },
 
     "keyboard-state": {
@@ -121,9 +125,26 @@
         // }
     },
     "clock": {
-        //"timezone": "Asia/Dhaka",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%d-%m-%Y}"
+        
+        "format": "{:%I:%M %p}",
+
+        "format-alt": "{:%A, %B %d, %Y | %I:%M %p}",
+        "tooltip-format":"<span size='18000'><tt><small>{calendar}</small></tt></span>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#F2EFE7'><b>{}</b></span>",
+                              "days":       "<span color='#FFFFFF'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#48A6A7'><b>{}</b></span>",
+                              "today":      "<span color='#F7374F'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode" }
     },
     "cpu": {
         "format": "{usage}% ",
@@ -146,23 +167,19 @@
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+      "states": {
+          "warning": 30,
+          "critical": 15
+  },
+      "format": "{icon}",
+      "format-full": "{icon}",
+      "format-charging": "",
+      "format-plugged": "",
+      "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"]
+
     },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
+
+
     "power-profiles-daemon": {
       "format": "{icon}",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -214,20 +231,12 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
-    "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
-    }
+
+"custom/power": {
+  "format": "⏻",
+  "tooltip": false,
+  "on-click": "~/.config/waybar/scripts/power_overlay.sh"
 }
-
-
+}
 //Styles
 
