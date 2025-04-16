@@ -1,17 +1,29 @@
 hello this is the dependencies
 
+file manager : yazi terminal file manager and thunar 
+  -> to download yazi
+    $ sudo pacman -S yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick
+    $ pacman -S resvg
+
 font : Noto Sans Bold 10pts
 terminal font : JetbrainsMono Nerd Font
+
 zsh
   -> zsh theme were used arrow and check some configs 
       to :) and :(
 hyprland
   -> tiling window manager that will be used download by "sudo pacman -S hyprland"
+
 hyprlock
+
 hypridle
+
 hyprshot
+
 waybar
+
 swaync
+
 hyprpaper:
   -> created a script for random wallpaper. To make the script executable:
     $ chmod +x ~/.config/hypr/scripts/random-wallpaper.sh
