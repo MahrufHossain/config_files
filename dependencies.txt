@@ -1,6 +1,8 @@
 hello this is the dependencies
 
-
+zsh
+  -> zsh theme were used arrow and check some configs 
+      to :) and :(
 hyprland
   -> tiling window manager that will be used download by "sudo pacman -S hyprland"
 hyprlock
