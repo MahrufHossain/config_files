@@ -1,4 +1,8 @@
+hello this is the dependencies
+
+
 hyprland
+  -> tiling window manager that will be used download by "sudo pacman -S hyprland"
 hyprlock
 hypridle
 hyprshot
@@ -18,4 +22,6 @@ wlogout:
       $ sudo rm *.png
   -> then set the colors from the icons of the assets to that folder
   -> $sudo cp ~/.config/wlogout/assets/*.png /usr/share/wlogout/icons 
-  
+ 
+ wezterm:
+  -> terminal will be used config files in "wezterm" file which to be set at "~/.config/wezterm/"
