@@ -3,7 +3,7 @@ local wezterm = require 'wezterm'
 return {
   font = wezterm.font 'JetBrainsMono Nerd Font',
   font_size = 20,
-  color_scheme = 'Catppuccin Mocha',
+  color_scheme = 'Sweet Eliverlara (Gogh)',
   enable_wayland = false,
   window_background_opacity = 1,
   use_fancy_tab_bar = false,

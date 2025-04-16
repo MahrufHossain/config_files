@@ -1,5 +1,7 @@
 hello this is the dependencies
 
+font : Noto Sans Bold 10pts
+terminal font : JetbrainsMono Nerd Font
 zsh
   -> zsh theme were used arrow and check some configs 
       to :) and :(
