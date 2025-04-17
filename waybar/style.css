@@ -76,33 +76,23 @@ window#waybar {
 /* Common Style for All Right Modules */
 #mpd,
 #idle_inhibitor,
-#pulseaudio,
-
 #power-profiles-daemon,
 #cpu,
 #memory,
 #temperature,
-#backlight,
 #keyboard-state,
 #sway-language,
-
-
 #tray,
-
 
 /* Hover effect */
 #mpd:hover,
 #idle_inhibitor:hover,
-#pulseaudio:hover,
-
 #power-profiles-daemon:hover,
 #cpu:hover,
 #memory:hover,
 #temperature:hover,
-#backlight:hover,
 #keyboard-state:hover,
 #sway-language:hover,
-
 #tray:hover,
 /* Optional icon spacing */
 #tray > .tray {
@@ -111,8 +101,8 @@ window#waybar {
 
 
 #clock {
-  padding: 0 5 0 5;
-  margin: 0 2px;
+  padding: 0 4;
+  margin: 0 0px;
   background-color: #222222;
   border-radius: 6px;
   font-size: 15px;
@@ -131,8 +121,8 @@ window#waybar {
 
 #battery {
   font-family: "JetBrainsMono Nerd Font";
-  padding: 0 5;
-  margin: 0 4px;
+  padding: 0 4;
+  margin: 0 0;
   font-size: 18px;
   color: #ffffff;
   background-color: #222222;
@@ -170,7 +160,7 @@ window#waybar {
 /* --- Power Button --- */
 #custom-power {
   padding: 0 ;
-  margin: 0 3px;
+  margin: 0 0;
   font-size: 18px;
   color: #000000;
   background-color: #ffffff;
@@ -191,8 +181,8 @@ window#waybar {
 
 
 #network {
-  padding : 0 15 0 15;
-  margin : 0 2 0 2;
+  padding : 0px 4px;
+  margin : 0px 0px;
   background-color: #222222;
   border-radius: 6px;
   font-size: 15px;
@@ -205,4 +195,57 @@ window#waybar {
 #network:hover {
   background-color: #333333;
   color: #ffffff;
+}
+
+#pulseaudio {
+  padding : 0 4px;
+  margin : 0 0px;
+  background-color : #222222;
+  border-radius : 6px;
+  font-size : 15px;
+  font-weight : bold;
+  color : #ffffff;
+  transition : background-color 0.3s ease;
+  min-height : 25px;
+}
+
+#pulseaudio:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+#backlight {
+  padding : 0 4;
+  margin : 0 0;
+  background-color : #222222;
+  border-radius : 6px;
+  font-size : 15px;
+  font-weight : bold;
+  color : #ffffff;
+  transition : background-color 0.3s ease;
+  min-height : 25px;
+}
+
+#backlight:hover{
+  background-color:#333333;
+  color : #ffffff;
+}
+
+
+#bluetooth {
+  font-family : "JetBrainsMono Nerd Font";
+  padding : 0 4;
+  margin: 0 0;
+  background-color : #222222;
+  border-radius : 6px;
+  font-weight : bold;
+  font-size : 15px;
+  color : #ffffff;
+  transition : background-color 0.3s ease;
+  min-height : 25px;
+}
+
+#bluetooth:hover {
+  background-color : #333333;
+  color : #ffffff;
 }
