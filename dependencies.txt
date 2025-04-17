@@ -1,5 +1,9 @@
 hello this is the dependencies
 
+rofi : for file launcher 
+
+picom : for blurry effect
+
 file manager : yazi terminal file manager and thunar 
   -> to download yazi
     $ sudo pacman -S yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick

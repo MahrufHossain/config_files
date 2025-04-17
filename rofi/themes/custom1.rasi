@@ -1,0 +1,33 @@
+configuration {
+    font: "Noto Sans 0";  /* Font and size */
+    show-icons: true;      /* Show icons */
+    line-height: 1.5;      /* Adjust line height */
+}
+
+listview {
+    lines: 10;             /* Number of lines visible in the menu */
+    fixed-height: 0;       /* Allow dynamic sizing */
+}
+
+element {
+    padding: 5px;          /* Padding around the element */
+    border-radius: 10px;   /* Rounded corners for items */
+}
+
+window {
+    width: 80%;            /* Window width */
+    height: 80%;           /* Window height */
+    border-radius: 10px;   /* Rounded corners for window */
+    border : 2px solid;
+  
+}
+
+* color: rgba(0,0,0, 0.4);  /* Transparent background */
+    border-color: #006a71;          /* Border color */
+    text-color: #FFFFFF;          
+    /* Text color */
+                           /* Full opacity */
+}
+
+
+
